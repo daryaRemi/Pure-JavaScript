@@ -75,7 +75,7 @@ module.exports = {
       filename: filename('css'),
     }),
   ],
-  devtool: isDev ? 'source-map' : '',
+  devtool: isDev ? 'source-map' : false,
   target: isDev ? 'web' : 'browserslist',
   module: {
     rules: [
