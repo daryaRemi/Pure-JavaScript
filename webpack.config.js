@@ -33,10 +33,17 @@ const jsLoaders = () => {
 module.exports = {
   context: path.resolve(__dirname, 'src'),
   mode: 'development',
-  entry: ['@babel/polyfill', './index.js'],
+  entry: {
+    main: [
+      'core-js/stable',
+      'regenerator-runtime/runtime',
+      './index.js',
+    ],
+  },
   output: {
     filename: filename('js'),
     path: path.resolve(__dirname, 'dist'),
+    clean: true,
   },
   resolve: {
     extensions: ['.js'],
