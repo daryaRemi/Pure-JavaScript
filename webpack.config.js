@@ -56,10 +56,9 @@ module.exports = {
   },
   devServer: {
     contentBase: path.join(__dirname, 'src'),
-    port: 3000,
-    open: true,
+    watchContentBase: true,
+    port: 8080,
     hot: isDev,
-    watchFiles: './',
   },
   plugins: [
     // применять изменения только при горячей перезагрузке
